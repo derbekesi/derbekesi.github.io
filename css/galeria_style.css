@@ -1,0 +1,184 @@
+  *{
+	 margin: 0;
+	 padding: 0;
+	 font-family: Century Gothic;
+ }
+ 
+ header{
+	 background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../pics/wine4.jpg');
+	 height: 100vh;
+	 background-size: cover;
+	 background-position: center;
+}
+
+ul{
+	float: left;
+	list-style-type:none;
+	margin-top: 30px;
+}
+
+ul li{
+	display: inline-block;
+	font-size: 25px;
+}
+
+ul a{
+	text-decoration: none;
+	color: #fff;
+	padding: 20px 50px;
+	margin: 0px 55px;
+	border: 3px solid #fff;
+	transition: 0.6s ease;
+	box-shadow: 0 5px 15px -5px #fff;
+}
+
+ul a:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+.main{
+	max-width: 1200px;
+	margin: auto;
+}
+
+.slidershow{
+	width: 1000px;
+	height: 480px;
+	overflow: hidden;
+}
+
+.middle{
+	position: absolute;
+	top: 13%;
+	left: 17.5%;
+}
+
+.navigation{
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+}
+
+.bar{
+	width: 50px;
+	height: 10px;
+	border: 2px solid #fff;
+	margin: 6px;
+	cursor: pointer;
+}
+
+.bar:hover{
+	background: #fff;
+}
+
+input[name="r"]{
+	position: absolute;
+	visibility: hidden;
+}
+
+.slides{
+	width: 500%;
+	height: 100%;
+	display: flex;	
+}
+
+.slide{
+	width: 20%;
+	transition: 0.6s;
+}
+
+.slide img{
+	width: 100%;
+	height: 100%;
+}
+
+#r1:checked ~ .s1{
+	margin-left: 0;
+}
+#r2:checked ~ .s1{
+	margin-left: -20%;
+}
+#r3:checked ~ .s1{
+	margin-left: -40%;
+}
+#r4:checked ~ .s1{
+	margin-left: -60%;
+}
+#r5:checked ~ .s1{
+	margin-left: -80%;
+}
+
+.signo{
+	width: 0%;
+	height: 50px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #000;
+	opacity: 0.6;
+}
+
+.szoveg{
+	position: absolute;
+	left: 10px;
+	bottom: 8px;
+	width: 10%;
+	height: 100%;
+	color: #fff;
+}
+
+.szoveg h1{
+	color: #fff;
+}
+
+.icons{
+	position: absolute;
+	top: 90%;
+	transform: translateY(-50%);
+	width: 100%;
+	text-align: center;
+}
+
+.btn{
+	display: inline-block;
+	width: 90px;
+	height: 90px;
+	background: #fff;
+	margin: 10px;
+	border-radius: 30%;
+	box-shadow: 0 5px 15px -5px #fff;
+	color: #000;
+	overflow: hidden;
+	position: relative;
+}
+
+.btn i{
+	line-height:90px;
+	font-size: 26px;
+	transition: 0.2s linear;
+}
+
+.btn:hover i{
+	transform: scale(1.3);
+	color: #fff;
+}
+
+.btn::before{
+	content: "";
+	position: absolute;
+	width: 120%;
+	height: 120%;
+	background: #000;
+	transform: rotate(45deg);
+	left: -110%;
+	top: 90%;
+}
+
+.btn:hover::before{
+	animation: aa 0.7s 1;
+	top: -10%;
+	left: -10%;
+}
